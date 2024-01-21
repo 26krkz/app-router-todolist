@@ -16,3 +16,5 @@ Npx create-next-app@latest
 Node 18.17.0
 vercel で deploy
 DB は後ほど vercel postgres を使う
+簡易的な TODO 画面を作る
+radix-ui を install。dialog, alertDialog を追加（use client じゃなきゃ使えない）
