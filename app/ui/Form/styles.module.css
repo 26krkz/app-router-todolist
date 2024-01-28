@@ -1,0 +1,15 @@
+.form {
+  align-items: center;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.input {
+  width: 250px;
+  height: 25px;
+}
+
+.addBtn {
+  margin-left: 20px;
+}

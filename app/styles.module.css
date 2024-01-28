@@ -1,3 +1,9 @@
 .header {
   text-align: center;
 }
+
+.main {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+}

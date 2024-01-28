@@ -1,11 +1,15 @@
 "use client";
 import { Button, Dialog, Flex, TextField, Text } from "@radix-ui/themes";
 
-export const TodoDialog = () => {
+type Props = {
+  className: string;
+};
+
+export const TodoDialog = (props: Props) => {
   return (
     <Dialog.Root>
       <Dialog.Trigger>
-        <Button>詳細を見る</Button>
+        <Button className={props.className}>編集する</Button>
       </Dialog.Trigger>
 
       <Dialog.Content style={{ maxWidth: 450 }}>

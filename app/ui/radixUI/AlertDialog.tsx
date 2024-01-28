@@ -1,11 +1,15 @@
 "use client";
 import { AlertDialog, Button, Flex } from "@radix-ui/themes";
 
-export const TodoAlertDialog = () => {
+type Props = {
+  className: string;
+};
+
+export const TodoAlertDialog = (props: Props) => {
   return (
     <AlertDialog.Root>
       <AlertDialog.Trigger>
-        <Button>削除</Button>
+        <Button className={props.className}>削除</Button>
       </AlertDialog.Trigger>
       <AlertDialog.Content style={{ maxWidth: 450 }}>
         <AlertDialog.Title>TODOの削除</AlertDialog.Title>

@@ -1,0 +1,28 @@
+.listItem {
+  list-style: none;
+}
+
+.listItem:not(:first-child) {
+  margin-top: 10px;
+}
+
+.listItem:not(:last-child) {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+.title {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+  width: 200px;
+}
+
+.dialogBtn {
+  margin-left: 10px;
+}
+
+.alertDialogBtn {
+  margin-left: 10px;
+}

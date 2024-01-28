@@ -20,3 +20,5 @@ DB は後ほど vercel postgres を使う
 radix-ui を install。dialog, alertDialog を追加（use client じゃなきゃ使えない）
 Todos.ts, Type.ts の追加
 TodoItem の追加
+title にリンクをつけて、ダイナミックルーティングで詳細ページを作成
+Todo リストと Form のスタイルを調整。
