@@ -14,10 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Theme>
-          <header>TODOLIST</header>
-          {children}
-        </Theme>
+        <Theme>{children}</Theme>
       </body>
     </html>
   );

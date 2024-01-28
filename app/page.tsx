@@ -1,29 +1,24 @@
 import { Button } from "@radix-ui/themes";
-import { TodoDialog } from "./ui/dialog";
-import { TodoAlertDialog } from "./ui/alertDialog";
+import styles from "./styles.module.css";
+import { TodoItem } from "./ui/todoItem";
+import { todos } from "./Todos";
 
 export default function Home() {
   return (
-    <main>
-      <form>
-        <label>
-          追加TODO
-          <input></input>
-        </label>
-        <Button>add</Button>
-      </form>
-      <ul>
-        <li>
-          <select>
-            <option value="new">新規</option>
-            <option value="progress">進行中</option>
-            <option value="complete">完了</option>
-          </select>
-          sample
-          <TodoDialog />
-          <TodoAlertDialog />
-        </li>
-      </ul>
-    </main>
+    <>
+      <header className={styles.header}>
+        <h1>TODOLIST</h1>
+      </header>
+      <main>
+        <form>
+          <label>
+            追加TODO
+            <input></input>
+          </label>
+          <Button>add</Button>
+        </form>
+        <ul>{todos.map((todo) => TodoItem(todo))}</ul>
+      </main>
+    </>
   );
 }
