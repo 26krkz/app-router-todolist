@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
-
-const inter = Inter({ subsets: ["latin"] });
+import styles from "./styles.module.css";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +12,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
+        <header className={styles.header}>
+          <Link className={styles.headerLink} href="/">
+            <h1>TODOLIST</h1>
+          </Link>
+        </header>
         <Theme>{children}</Theme>
       </body>
     </html>

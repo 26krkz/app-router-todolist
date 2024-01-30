@@ -22,3 +22,6 @@ Todos.ts, Type.ts の追加
 TodoItem の追加
 title にリンクをつけて、ダイナミックルーティングで詳細ページを作成
 Todo リストと Form のスタイルを調整。
+Select の追加。
+dinamic routing のサイドバーを layout で作成。
+header を layout に移動して、detail 画面でも表示されるようにする。ヘッダーの文字をリンクにしてトップに戻れるようにする。
