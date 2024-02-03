@@ -1,0 +1,22 @@
+.form {
+  align-items: center;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.input {
+  width: 250px;
+  height: 20px;
+  display: block;
+}
+
+.input:first-child {
+  margin-bottom: 3px;
+}
+
+.addBtn {
+  margin-left: 20px;
+  width: 70px;
+  height: 40px;
+}

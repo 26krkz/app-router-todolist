@@ -1,5 +1,15 @@
-import Image from "next/image";
+import styles from "./styles.module.css";
+import { TodoItem } from "./ui/TodoItem";
+import { todos } from "./Todos";
+import { Form } from "./ui/Form";
 
 export default function Home() {
-  return <main></main>;
+  return (
+    <>
+      <main className={styles.main}>
+        <Form />
+        <ul className={styles.listItems}>{todos.map((todo) => TodoItem(todo))}</ul>
+      </main>
+    </>
+  );
 }

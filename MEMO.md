@@ -16,3 +16,13 @@ Npx create-next-app@latest
 Node 18.17.0
 vercel で deploy
 DB は後ほど vercel postgres を使う
+簡易的な TODO 画面を作る
+radix-ui を install。dialog, alertDialog を追加（use client じゃなきゃ使えない）
+Todos.ts, Type.ts の追加
+TodoItem の追加
+title にリンクをつけて、ダイナミックルーティングで詳細ページを作成
+Todo リストと Form のスタイルを調整。
+Select の追加。
+dinamic routing のサイドバーを layout で作成。
+header を layout に移動して、detail 画面でも表示されるようにする。ヘッダーの文字をリンクにしてトップに戻れるようにする。
+Todo の項目にメモを追加（メモの input、詳細画面にメモを表示、モーダルにメモを表示）。合わせてスタイルを調整
