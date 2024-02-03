@@ -25,6 +25,12 @@ export const TodoDialog = (props: Props) => {
             </Text>
             <TextField.Input defaultValue="現在のTODO" placeholder="新しいTODOを追加してください" />
           </label>
+          <label>
+            <Text as="div" size="2" mb="1" weight="bold">
+              メモ
+            </Text>
+            <TextField.Input defaultValue="現在のメモ" placeholder="新しいメモを追加してください" />
+          </label>
         </Flex>
 
         <Flex gap="3" mt="4" justify="end">

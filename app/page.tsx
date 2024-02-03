@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <main className={styles.main}>
         <Form />
-        <ul>{todos.map((todo) => TodoItem(todo))}</ul>
+        <ul className={styles.listItems}>{todos.map((todo) => TodoItem(todo))}</ul>
       </main>
     </>
   );

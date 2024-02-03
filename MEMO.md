@@ -25,3 +25,4 @@ Todo リストと Form のスタイルを調整。
 Select の追加。
 dinamic routing のサイドバーを layout で作成。
 header を layout に移動して、detail 画面でも表示されるようにする。ヘッダーの文字をリンクにしてトップに戻れるようにする。
+Todo の項目にメモを追加（メモの input、詳細画面にメモを表示、モーダルにメモを表示）。合わせてスタイルを調整

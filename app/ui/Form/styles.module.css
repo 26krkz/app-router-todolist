@@ -7,9 +7,16 @@
 
 .input {
   width: 250px;
-  height: 25px;
+  height: 20px;
+  display: block;
+}
+
+.input:first-child {
+  margin-bottom: 3px;
 }
 
 .addBtn {
   margin-left: 20px;
+  width: 70px;
+  height: 40px;
 }
