@@ -1,5 +1,5 @@
 import { Todo } from "@/app/Type";
-import { TodoAlertDialog } from "@/app/ui/RadixUI/AlertDialog";
+import TodoAlertDialog from "@/app/ui/RadixUI/AlertDialog";
 import { TodoDialog } from "@/app/ui/RadixUI/Dialog";
 import Link from "next/link";
 import styles from "./styles.module.css";
