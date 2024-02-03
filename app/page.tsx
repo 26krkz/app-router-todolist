@@ -1,4 +1,3 @@
-import { Button } from "@radix-ui/themes";
 import styles from "./styles.module.css";
 import { TodoItem } from "./ui/TodoItem";
 import { todos } from "./Todos";
