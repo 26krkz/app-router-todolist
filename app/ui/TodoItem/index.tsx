@@ -1,9 +1,7 @@
 import { Todo } from "@/app/Type";
-import TodoAlertDialog from "@/app/ui/RadixUI/AlertDialog";
-import { TodoDialog } from "@/app/ui/RadixUI/Dialog";
+import { TodoAlertDialog, TodoDialog, TodoSelelct } from "../RadixUI";
 import Link from "next/link";
 import styles from "./styles.module.css";
-import { TodoSelelct } from "@/app/ui/RadixUI/Select";
 
 export const TodoItem = (todo: Todo) => {
   return (

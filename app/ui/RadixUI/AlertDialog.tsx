@@ -5,7 +5,7 @@ type Props = {
   className: string;
 };
 
-export default function TodoAlertDialog(props: Props) {
+export const TodoAlertDialog = (props: Props) => {
   return (
     <AlertDialog.Root>
       <AlertDialog.Trigger>
@@ -30,4 +30,4 @@ export default function TodoAlertDialog(props: Props) {
       </AlertDialog.Content>
     </AlertDialog.Root>
   );
-}
+};
