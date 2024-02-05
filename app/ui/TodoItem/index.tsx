@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 
 export const TodoItem = (todo: Todo) => {
   return (
-    <li className={styles.listItem}>
+    <li className={styles.listItem} key={todo.id}>
       <TodoSelelct />
       <Link href={`/detail/${todo.id}`} className={styles.title}>
         {todo.title}

@@ -1,9 +1,13 @@
 import styles from "./styles.module.css";
 import { TodoItem } from "./ui/TodoItem";
-import { todos } from "./Todos";
 import { Form } from "./ui/Form";
+import { fetchTodos } from "./api";
 
-export default function Home() {
+export default async function Home() {
+  const todos = await fetchTodos();
+  if (!todos) {
+    return <>データの取得に失敗</>;
+  }
   return (
     <>
       <main className={styles.main}>
