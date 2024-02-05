@@ -36,3 +36,4 @@ supabase の設定
 - app/db/index.tsx に client を作成 => 環境変数を使う(NEXT_PUBLIC をつける)
 - supabase に policy を追加する。
 - fetch で DB から値を取得できるようにする。
+- next_public だとクライアントに公開されてしまうため外した。→ サーバーで環境変数を扱えるように server action に変更。
