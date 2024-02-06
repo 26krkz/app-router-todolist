@@ -1,7 +1,7 @@
 "use client";
 import { Todo } from "@/app/Type";
 import { Button, Dialog, Flex, TextField, Text } from "@radix-ui/themes";
-import { editTodos } from "@/app/api";
+import { editTodos } from "@/app/actions";
 
 type Props = {
   className: string;

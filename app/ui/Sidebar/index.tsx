@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./style.module.css";
-import { fetchTodos } from "@/app/api";
+import { fetchTodos } from "@/app/actions";
 import { notFound } from "next/navigation";
 
 export default async function Sidebar() {
