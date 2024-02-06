@@ -6,7 +6,7 @@ export type Json =
   | { [key: string]: Json | undefined }
   | Json[]
 
-export interface Database {
+export type Database = {
   public: {
     Tables: {
       todos: {
@@ -15,18 +15,21 @@ export interface Database {
           isCompleted: boolean
           memo: string | null
           title: string
+          todoId: string
         }
         Insert: {
           id?: number
           isCompleted?: boolean
           memo?: string | null
           title?: string
+          todoId: string
         }
         Update: {
           id?: number
           isCompleted?: boolean
           memo?: string | null
           title?: string
+          todoId?: string
         }
         Relationships: []
       }

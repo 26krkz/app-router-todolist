@@ -1,8 +1,8 @@
 export type Todo = {
-  id: number;
   title: string;
   memo: string | null;
   isCompleted: boolean;
+  todoId: string;
 };
 
 export type Todos = Todo[];

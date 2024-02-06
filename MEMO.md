@@ -37,8 +37,11 @@ supabase の設定
 - supabase に policy を追加する。
 - fetch で DB から値を取得できるようにする。
 - next_public だとクライアントに公開されてしまうため外した。→ サーバーで環境変数を扱えるように server action に変更。
+- id:number が扱いづらいから、新規で todoId: string を作成 nanoid()で値を生成。
 
 API の作成
 
+- serverAcrion の formData を使うときは input タグに name を必ずつける。
 - fetchTodos の作成。noStore()にすることで毎回最新の情報を取得できているが、fetchTodos を複数箇所で呼んでいるのでリファクタが必要かも。
 - createTodos の作成。serverAcrions を使用。form データは引数 FormData で受け取るように実装。
+- editTodos の作成。bind を使うことで formData に含まれない値を含める。

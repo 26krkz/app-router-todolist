@@ -10,8 +10,8 @@ export default async function Sidebar() {
     <ul className={styles.list}>
       {todos.map((todo) => {
         return (
-          <li className={styles.listItem} key={todo.id}>
-            <Link className={styles.link} href={`/detail/${todo.id}`}>
+          <li className={styles.listItem} key={todo.todoId}>
+            <Link className={styles.link} href={`/detail/${todo.todoId}`}>
               {todo.title}
             </Link>
           </li>
