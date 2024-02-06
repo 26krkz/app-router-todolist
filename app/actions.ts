@@ -42,3 +42,16 @@ export const editTodos = async (todoId: string, formData: FormData) => {
     throw err;
   }
 };
+
+export const deleteTodos = async (todoId: string) => {
+  try {
+    const { error } = await supabase.from("todos").delete().eq("todoId", todoId);
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("正常にTodoを削除できました。");
+    }
+  } catch (err) {
+    throw err;
+  }
+};

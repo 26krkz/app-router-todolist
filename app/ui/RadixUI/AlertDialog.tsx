@@ -1,11 +1,19 @@
 "use client";
 import { AlertDialog, Button, Flex } from "@radix-ui/themes";
+import { Todo } from "@/app/Type";
+import { deleteTodos } from "@/app/actions";
 
 type Props = {
   className: string;
+  todo: Todo;
 };
 
 export const TodoAlertDialog = (props: Props) => {
+  const { todoId } = props.todo;
+  const handleClickDelete = async () => {
+    await deleteTodos(todoId);
+  };
+
   return (
     <AlertDialog.Root>
       <AlertDialog.Trigger>
@@ -22,7 +30,7 @@ export const TodoAlertDialog = (props: Props) => {
             </Button>
           </AlertDialog.Cancel>
           <AlertDialog.Action>
-            <Button variant="solid" color="red">
+            <Button variant="solid" color="red" onClick={handleClickDelete}>
               削除する
             </Button>
           </AlertDialog.Action>

@@ -11,7 +11,7 @@ export const TodoItem = (todo: Todo) => {
         {todo.title}
       </Link>
       <TodoDialog className={styles.dialogBtn} todo={todo} />
-      <TodoAlertDialog className={styles.alertDialogBtn} />
+      <TodoAlertDialog className={styles.alertDialogBtn} todo={todo} />
     </li>
   );
 };
