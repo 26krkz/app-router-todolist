@@ -1,10 +1,15 @@
 import Link from "next/link";
-import { todos } from "@/app/Todos";
+import { fetchTodos } from "@/app/api";
+import { notFound } from "next/navigation";
 
-// todo: Todoの情報をidを使ってDBにfetchする。
-export default function Page({ params }: { params: { id: string } }) {
-  const todo = todos.find((todo) => todo.id === params.id);
-  if (!todo) throw new Error("error");
+export default async function Page({ params }: { params: { id: string } }) {
+  const todos = await fetchTodos();
+  if (!todos) notFound();
+  // TODO: todo.id( number ) とparams.id( string ) の比較を検討
+  const todo = todos.find((todo) => String(todo.id) === params.id);
+  if (!todo) {
+    return <h1>Todoリストに存在しないTodoの詳細を参照している可能性があります。</h1>;
+  }
 
   return (
     <>

@@ -1,5 +1,5 @@
 import styles from "./styles.module.css";
-import { Sidebar } from "@/app/ui/Sidebar";
+import Sidebar from "@/app/ui/Sidebar";
 
 export default function detailLayout({ children }: { children: React.ReactNode }) {
   return (
