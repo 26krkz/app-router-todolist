@@ -1,0 +1,9 @@
+.link {
+  color: #333;
+  text-decoration: none;
+}
+
+.disabledLink {
+  color: #b0c4de;
+  pointer-events: none;
+}

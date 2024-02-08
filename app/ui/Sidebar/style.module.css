@@ -13,8 +13,3 @@
 .listItem:not(:first-child) {
   margin-top: 10px;
 }
-
-.link {
-  color: #333;
-  text-decoration: none;
-}
