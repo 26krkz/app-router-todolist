@@ -6,7 +6,7 @@ import { fetchTodos } from "./actions";
 export default async function Home() {
   const todos = await fetchTodos();
   if (!todos) {
-    return <>データの取得に失敗</>;
+    return <>データの取得に失敗しました</>;
   }
   return (
     <>

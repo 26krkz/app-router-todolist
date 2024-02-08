@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./style.module.css";
 import { fetchTodos } from "@/app/actions";
 import { notFound } from "next/navigation";
+import { SideBarLink } from "./SideBarLink";
 
 export default async function Sidebar() {
   const todos = await fetchTodos();
@@ -11,9 +12,7 @@ export default async function Sidebar() {
       {todos.map((todo) => {
         return (
           <li className={styles.listItem} key={todo.todoId}>
-            <Link className={styles.link} href={`/detail/${todo.todoId}`}>
-              {todo.title}
-            </Link>
+            <SideBarLink todo={todo} />
           </li>
         );
       })}
