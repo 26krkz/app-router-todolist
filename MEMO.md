@@ -11,6 +11,8 @@ todo の取得を遅らせて、susupend の状態を表示する。（loading.j
 error.js でエラーハンドリングする。
 詳細画面で Todo を更新できるようにする。→ post 後 server actions で redirect()を使う？
 詳細画面で Todo の削除をできるようにする。→ 削除後は該当画面の Todo がなくなるので、permanent redirect を使う。
+ダブルクリックで POST できないようにする。
+新規追加後 useRef でリセットする。
 
 リストの構成
 タイトル
