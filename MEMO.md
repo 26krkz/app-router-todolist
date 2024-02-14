@@ -6,13 +6,13 @@
 ~~usePathname を使って、詳細画面のサイドバーのリンクを同ページの場合押されている感じ、異なるページの場合押せる感じにする。~~
 Nextauth でログイン・ログアウトを作成 → ユーザーはテストのみ。
 ユーザーの新規登録は作らない。
-Todo の追加後、画面をリロードしなくても Todo が追加されているように state で管理。
+~~Todo の追加後、画面をリロードしなくても Todo が追加されているように redirect()を実行。~~
 todo の取得を遅らせて、susupend の状態を表示する。（loading.js を使う）
 error.js でエラーハンドリングする。
 詳細画面で Todo を更新できるようにする。→ post 後 server actions で redirect()を使う？
 詳細画面で Todo の削除をできるようにする。→ 削除後は該当画面の Todo がなくなるので、permanent redirect を使う。
 ダブルクリックで POST できないようにする。
-新規追加後 useRef でリセットする。
+新規追加後 state で管理して form をリセットする。ただ Form を use client にする必要あり。。
 
 リストの構成
 タイトル
@@ -54,3 +54,5 @@ API の作成
 - createTodos の作成。serverAcrions を使用。form データは引数 FormData で受け取るように実装。
 - editTodos の作成。bind を使うことで formData に含まれない値を含める。
 - deleteTodos の作成。form じゃなくても client コンポーネントの onclick で serverAcrionts は使えるみたい。
+
+- revalidatePath()は delete の場合はうまくデータが反映されないので必要。一方で update と create の場合はなくても問題ないっぽい。なぜなのかは分からず。
