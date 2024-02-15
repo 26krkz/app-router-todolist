@@ -56,3 +56,5 @@ API の作成
 - deleteTodos の作成。form じゃなくても client コンポーネントの onclick で serverAcrionts は使えるみたい。
 
 - revalidatePath()は delete の場合はうまくデータが反映されないので必要。一方で update と create の場合はなくても問題ないっぽい。なぜなのかは分からず。
+- onSubmit と action の併用は action が処理された後 onSubmit が実行される？
+- Form の state 管理はカスタムフックを使う。
