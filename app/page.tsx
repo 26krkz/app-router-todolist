@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
-import { TodoItem } from "./ui/TodoItem";
 import { Form } from "./ui/Form";
+import { TodoList } from "./ui/TodoList";
 import { fetchTodos } from "./actions";
 
 export default async function Home() {
@@ -12,7 +12,7 @@ export default async function Home() {
     <>
       <main className={styles.main}>
         <Form />
-        <ul className={styles.listItems}>{todos.map((todo) => TodoItem(todo))}</ul>
+        <TodoList todos={todos} />
       </main>
     </>
   );

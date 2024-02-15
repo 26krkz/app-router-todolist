@@ -1,7 +1,8 @@
 "use server";
 import supabase from "./supabase";
-import { unstable_noStore as noStore } from "next/cache";
+import { unstable_noStore as noStore, revalidatePath } from "next/cache";
 import { nanoid } from "nanoid";
+import { redirect } from "next/navigation";
 
 export const fetchTodos = async () => {
   noStore();
@@ -25,6 +26,9 @@ export const createTodos = async (formData: FormData) => {
   } catch (err) {
     throw err;
   }
+
+  revalidatePath("/");
+  redirect("/");
 };
 
 export const editTodos = async (todoId: string, formData: FormData) => {
@@ -41,6 +45,9 @@ export const editTodos = async (todoId: string, formData: FormData) => {
   } catch (err) {
     throw err;
   }
+
+  revalidatePath("/");
+  redirect("/");
 };
 
 export const deleteTodos = async (todoId: string) => {
@@ -54,4 +61,7 @@ export const deleteTodos = async (todoId: string) => {
   } catch (err) {
     throw err;
   }
+
+  revalidatePath("/");
+  redirect("/");
 };
