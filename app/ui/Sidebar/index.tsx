@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./style.module.css";
-import { fetchTodos } from "@/app/actions";
+import { fetchTodos } from "@/app/fetchers";
 import { notFound } from "next/navigation";
 import { SideBarLink } from "./SideBarLink";
 

@@ -19,6 +19,14 @@
   width: 200px;
 }
 
+.isCompletedTitle {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #eee;
+  display: inline-block;
+  width: 200px;
+}
+
 .dialogBtn {
   margin-left: 10px;
 }
