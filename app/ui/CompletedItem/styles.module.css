@@ -1,5 +1,7 @@
 .listItem {
   list-style: none;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .listItem:not(:first-child) {
@@ -16,7 +18,6 @@
   text-decoration: none;
   color: #333;
   display: inline-block;
-  width: 200px;
   line-height: 32px;
 }
 

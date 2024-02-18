@@ -22,7 +22,7 @@ export const TodoItem = (todo: Todo) => {
           },
         }}
       />
-      <Link href={`/detail/${todoId}`} className={isCompleted ? styles.isCompletedTitle : styles.title}>
+      <Link href={`/detail/${todoId}`} className={styles.title}>
         {title}
       </Link>
       <TodoDialog className={styles.dialogBtn} todo={todo} />

@@ -62,3 +62,7 @@ API の作成
 
 - 関数を直接クライアント・コンポーネントに渡す時は"use server"を明記する必要がある
 - Form 以外の client components で server action を使うときは startTransition()を使う。
+
+- completedTodos をフェッチするために api 作成
+- 完了済みリストを作成
+-
