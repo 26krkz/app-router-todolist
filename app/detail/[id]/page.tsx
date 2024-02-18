@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { fetchTodos } from "@/app/actions";
+import { fetchTodos } from "@/app/fetchers";
 import { notFound } from "next/navigation";
 
 export default async function Page({ params }: { params: { id: string } }) {

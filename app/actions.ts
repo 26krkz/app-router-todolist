@@ -1,19 +1,9 @@
 "use server";
 import supabase from "./supabase";
-import { unstable_noStore as noStore, revalidatePath } from "next/cache";
+import { revalidatePath } from "next/cache";
 import { nanoid } from "nanoid";
 import { redirect } from "next/navigation";
-
-export const fetchTodos = async () => {
-  noStore();
-
-  try {
-    const { data, error } = await supabase.from("todos").select();
-    return data;
-  } catch (err) {
-    throw err;
-  }
-};
+import { Todo } from "./Type";
 
 export const createTodos = async (formData: FormData) => {
   const title = formData.get("title") as string;
@@ -57,6 +47,22 @@ export const deleteTodos = async (todoId: string) => {
       console.log(error);
     } else {
       console.log("正常にTodoを削除できました。");
+    }
+  } catch (err) {
+    throw err;
+  }
+
+  revalidatePath("/");
+  redirect("/");
+};
+
+export const switchIsCompleted = async ({ todoId, isCompleted }: Pick<Todo, "todoId" | "isCompleted">) => {
+  try {
+    const { data, error } = await supabase.from("todos").update({ isCompleted: !isCompleted }).eq("todoId", todoId).select();
+    if (error) {
+      console.error(error);
+    } else {
+      console.log("該当Todoの完了状態を変更しました。");
     }
   } catch (err) {
     throw err;

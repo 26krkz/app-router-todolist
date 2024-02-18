@@ -13,6 +13,7 @@ error.js でエラーハンドリングする。
 詳細画面で Todo の削除をできるようにする。→ 削除後は該当画面の Todo がなくなるので、permanent redirect を使う。
 ダブルクリックで POST できないようにする。
 新規追加後 state で管理して form をリセットする。ただ Form を use client にする必要あり。。
+isCompleted を使って、新規 → 完了にしたら色を変えて、isCompleted を変更したことを DB に保存するために POST する。
 
 リストの構成
 タイトル
@@ -58,3 +59,10 @@ API の作成
 - revalidatePath()は delete の場合はうまくデータが反映されないので必要。一方で update と create の場合はなくても問題ないっぽい。なぜなのかは分からず。
 - onSubmit と action の併用は action が処理された後 onSubmit が実行される？
 - Form の state 管理はカスタムフックを使う。
+
+- 関数を直接クライアント・コンポーネントに渡す時は"use server"を明記する必要がある
+- Form 以外の client components で server action を使うときは startTransition()を使う。
+
+- completedTodos をフェッチするために api 作成
+- 完了済みリストを作成
+-
