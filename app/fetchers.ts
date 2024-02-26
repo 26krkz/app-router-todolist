@@ -17,7 +17,7 @@ export const fetchTodos = () => {
       } catch (err) {
         reject(err);
       }
-    }, 2000);
+    }, 1000);
   });
 };
 
@@ -36,6 +36,6 @@ export const fetchCompletedTodos = () => {
       } catch (err) {
         reject(err);
       }
-    }, 2000);
+    }, 1000);
   });
 };
