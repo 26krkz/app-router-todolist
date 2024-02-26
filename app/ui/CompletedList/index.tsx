@@ -8,7 +8,11 @@ export const CompletedList = async () => {
   return (
     <>
       {haveCompleted && <div className={styles.completedTitle}>完了済み</div>}
-      <ul className={styles.listItems}>{todos.map((todo) => CompletedItem(todo))}</ul>
+      <ul className={styles.listItems}>
+        {todos.map((todo) => (
+          <CompletedItem todo={todo} key={todo.todoId} />
+        ))}
+      </ul>
     </>
   );
 };

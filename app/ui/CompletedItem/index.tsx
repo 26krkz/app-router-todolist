@@ -3,7 +3,7 @@ import { TodoAlertDialog } from "../RadixUI";
 import styles from "./styles.module.css";
 import { switchIsCompleted } from "@/app/actions";
 
-export const CompletedItem = (todo: Todo) => {
+export const CompletedItem = ({ todo }: { todo: Todo }) => {
   const { title, todoId, isCompleted } = todo;
   return (
     <li className={styles.listItem} key={todoId}>

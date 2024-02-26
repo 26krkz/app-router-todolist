@@ -14,6 +14,7 @@ error.js でエラーハンドリングする。
 ダブルクリックで POST できないようにする。
 ~~新規追加後 state で管理して form をリセットする。Form を use client にする~~
 ~~isCompleted を使って完了したら isCompleted を変更したことを DB に保存するために POST し、完了済みリストに移動させる。~~
+Todo を作成・編集・削除したときにスナックバーを出す
 
 cording
 Npx create-next-app@latest
