@@ -5,7 +5,7 @@ import { TodoListSkeleton } from "./ui/TodoListSkelton";
 import { CompletedList } from "./ui/CompletedList";
 import { Suspense } from "react";
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <main className={styles.main}>
