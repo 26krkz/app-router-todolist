@@ -2,19 +2,22 @@ import supabase from "./supabase";
 import { unstable_noStore as noStore } from "next/cache";
 import type { Todos } from "./Type";
 
-export const fetchTodos = async () => {
+export const fetchTodos = () => {
   noStore();
-
-  try {
-    const { data, error } = await supabase.from("todos").select().eq("isCompleted", false);
-    if (!data) {
-      return [];
-    } else {
-      return data;
-    }
-  } catch (err) {
-    throw "TodoListのデータ取得に失敗しました。";
-  }
+  return new Promise<Todos>((resolve, reject) => {
+    setTimeout(async () => {
+      try {
+        const { data, error } = await supabase.from("todos").select().eq("isCompleted", false);
+        if (!data) {
+          resolve([]);
+        } else {
+          resolve(data);
+        }
+      } catch (err) {
+        reject(err);
+      }
+    }, 1000);
+  });
 };
 
 export const fetchCompletedTodos = () => {
