@@ -1,0 +1,17 @@
+.listItem {
+  list-style: none;
+}
+
+.listItem:not(:first-child) {
+  margin-top: 10px;
+}
+
+.listItem:not(:last-child) {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+.itemInner {
+  height: 32px;
+  background-color: #eee;
+}

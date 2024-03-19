@@ -7,18 +7,14 @@
 Nextauth でログイン・ログアウトを作成 → ユーザーはテストのみ。
 ユーザーの新規登録は作らない。
 ~~Todo の追加後、画面をリロードしなくても Todo が追加されているように redirect()を実行。~~
-todo の取得を遅らせて、susupend の状態を表示する。（loading.js を使う）
+~~todo の取得を遅らせて、susupend の状態を表示する。（loading.js を使う）~~
 error.js でエラーハンドリングする。
 詳細画面で Todo を更新できるようにする。→ post 後 server actions で redirect()を使う？
 詳細画面で Todo の削除をできるようにする。→ 削除後は該当画面の Todo がなくなるので、permanent redirect を使う。
 ダブルクリックで POST できないようにする。
-新規追加後 state で管理して form をリセットする。ただ Form を use client にする必要あり。。
-isCompleted を使って、新規 → 完了にしたら色を変えて、isCompleted を変更したことを DB に保存するために POST する。
-
-リストの構成
-タイトル
-編集・削除ボタン
-チェックリスト
+~~新規追加後 state で管理して form をリセットする。Form を use client にする~~
+~~isCompleted を使って完了したら isCompleted を変更したことを DB に保存するために POST し、完了済みリストに移動させる。~~
+Todo を作成・編集・削除したときにスナックバーを出す
 
 cording
 Npx create-next-app@latest
@@ -65,4 +61,7 @@ API の作成
 
 - completedTodos をフェッチするために api 作成
 - 完了済みリストを作成
--
+
+- suspence と loading を使って遅延させたデータを取得するときにスケルトンを表示
+- データの取得を遅延させるために setTimeout を使う
+- データ取得を待つ間 suspence で表示するスケルトンを作成。
